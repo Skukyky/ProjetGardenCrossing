@@ -1,6 +1,11 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "MyProject8Character.h"
+
+#include <string>
+
+#include "DrawDebugHelpers.h"
+#include "Engine/World.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -9,7 +14,9 @@
 #include "GameFramework/Controller.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "GrapPoint.h"
 #include "InputActionValue.h"
+#include "KismetTraceUtils.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -86,6 +93,9 @@ void AMyProject8Character::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMyProject8Character::Look);
+
+		//Interact
+		EnhancedInputComponent->BindAction(InteractionAction, ETriggerEvent::Ongoing, this, &AMyProject8Character::Interaction);
 	}
 	else
 	{
@@ -127,4 +137,30 @@ void AMyProject8Character::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void AMyProject8Character::Interaction()
+{
+	TArray<FHitResult> HitResults;
+	FVector StartLocation = GetActorLocation();
+	ECollisionChannel Trace = ECollisionChannel::ECC_GameTraceChannel1;
+	FCollisionQueryParams params;
+	float Radus = 1000.0f;
+	params.AddIgnoredActor(this);
+	GetWorld()->SweepMultiByChannel(HitResults, StartLocation, StartLocation, FQuat(),Trace,FCollisionShape::MakeSphere(Radus),params);
+	DrawDebugSweptSphere(GetWorld(),StartLocation,StartLocation,Radus, FColor::Red,false);
+	if (HitResults.Num() > 0)
+	{
+		GrapPoints.clear();
+		for (FHitResult HitResult : HitResults)
+		{
+			if (AGrapPoint* GrapPoint = Cast<AGrapPoint>(HitResult.GetActor()))
+			{
+				GrapPoints.insert(GrapPoints.end(),*GrapPoint);
+				GrapPoint->CanGrap();
+			} 
+		}
+		
+	}
+	
 }

@@ -2,7 +2,10 @@
 
 #pragma once
 
+#include <vector>
+
 #include "CoreMinimal.h"
+#include "GrapPoint.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "MyProject8Character.generated.h"
@@ -44,9 +47,13 @@ class AMyProject8Character : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
+	/** Interaction Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* InteractionAction;
+
 public:
 	AMyProject8Character();
-	
+	std::vector <AGrapPoint> GrapPoints;
 
 protected:
 
@@ -55,7 +62,9 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
-			
+
+	void Interaction();
+
 
 protected:
 	// APawn interface
