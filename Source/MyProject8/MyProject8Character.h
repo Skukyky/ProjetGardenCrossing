@@ -53,7 +53,11 @@ class AMyProject8Character : public ACharacter
 
 public:
 	AMyProject8Character();
+<<<<<<< Updated upstream
 	std::vector <AGrapPoint> GrapPoints;
+=======
+	bool OnSpline = false;
+>>>>>>> Stashed changes
 
 protected:
 

@@ -33,10 +33,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UMaterial* Material;
 
-private:
 	UPROPERTY(VisibleAnywhere)
 	UBoxComponent* Collider;
 
+private:
+	
 	UFUNCTION()
 	void OnComponentOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };
