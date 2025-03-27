@@ -14,9 +14,14 @@
     <list default="true" id="a803701f-5a98-4a6b-8078-d330cd70da10" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyProject8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyProject8/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MyProject8/BP_MushRoom.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MyProject8/BP_MushRoom.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MyProject8/BP_MushRoom.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MyProject8/BP_MushRoom.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MyProject8/MyProject8Character.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MyProject8/MyProject8Character.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/0/NO/5JXJU3D40UPXMW6VPYG3LT.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/T6/SNZ8PWJK3PWYEF0XZVG60U.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/2/C1/42EBVLIAK2OI7XUZR96SVB.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/4/9M/HFMCY3Q65FALX6ZHR19CEW.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/4/E3/IJQ9TC98V1EZAGEC3NOUOT.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/QR/J1ZSPQPYDRBPK9U558KTV1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/S3/D4TUXIXKFZCAGLQ2UYLE6G.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/E/GJ/VG4R1BJN3W10L0OM61EWWP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/E/GJ/VG4R1BJN3W10L0OM61EWWP.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -504,6 +509,7 @@
       <workItem from="1742805640343" duration="227000" />
       <workItem from="1742813549144" duration="1507000" />
       <workItem from="1742815300213" duration="1987000" />
+      <workItem from="1743080415574" duration="112000" />
     </task>
     <servers />
   </component>
